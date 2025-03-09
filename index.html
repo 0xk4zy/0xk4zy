@@ -37,6 +37,23 @@
             padding: 50px 0;
         }
 
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #00ffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-shadow: 0 0 5px #00ff00;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+        }
+
         h1, h2 {
             font-size: 3rem;
             margin: 0;
@@ -122,7 +139,7 @@
             line-height: 1.5;
         }
 
-        .skills, .contact {
+        .skills, .contact, .writeups {
             margin-bottom: 40px;
         }
 
@@ -147,6 +164,16 @@
             color: #ff00ff;
         }
 
+        code {
+            background: #111;
+            padding: 2px 5px;
+            color: #00ffff;
+        }
+
+        .writeup-entry {
+            margin-bottom: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -159,6 +186,10 @@
     <div class="matrix-bg"></div>
     <header>
         <h1 class="glitch" data-text="> WhoAmI">> WhoAmI</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#writeup">Writeups</a>
+        </nav>
     </header>
     <main>
         <section class="terminal">
@@ -167,7 +198,7 @@
                 <span class="command">whoami</span>
             </div>
             <p class="output">Hey, eu sunt Asis – un pasionat de securitate cibernetică.<br> 
-            .</p>
+            Vezi writeup-urile mele mai jos la <a href="#writeup">Writeups</a>!</p>
         </section>
         <section class="skills">
             <h2 class="glitch" data-text="> Skills">> Skills</h2>
@@ -180,15 +211,34 @@
         </section>
         <section class="contact">
             <h2 class="glitch" data-text="> Connect">> Connect</h2>
-            <p>Find me in the matrix: <a href="https://github.com/0xas1s">GitHub</a> | <a href="mailto:ratonelulgri@proton.me">Email</a> | <a href="https://x.com/n0tpetya_ctf">X.com<a/></p>
-            
+            <p>Find me in the matrix: <a href="https://github.com/0xas1s">GitHub</a> | <a href="mailto:ratonelulgri@proton.me">Email</a> | <a href="https://x.com/n0tpetya_ctf">X.com</a></p>
+        </section>
+        <section class="writeups" id="writeup">
+            <h2 class="glitch" data-text="> Writeups">> Writeups</h2>
+            <div class="terminal">
+                <div class="writeup-entry">
+                    <h3>XSS Found on Example.com - 09/03/2025</h3>
+                    <p>Target: <code>example.com</code></p>
+                    <p>Am găsit o vulnerabilitate XSS pe <code>https://example.com/search?q=test</code>. Payload-ul <code><script>alert('XSS')</script></code> a fost executat din cauza unui CSP slab configurat.</p>
+                    <p>PoC: <code>https://example.com/search?q=<script>alert('XSS')</script></code></p>
+                </div>
+                <!-- Adaugă mai multe writeup-uri aici -->
+                <!-- Exemplu: -->
+                <!--
+                <div class="writeup-entry">
+                    <h3>SQL Injection on Target - 10/03/2025</h3>
+                    <p>Target: <code>target.com</code></p>
+                    <p>O injecție simplă <code>' OR 1=1 --</code> a ocolit autentificarea.</p>
+                    <p>PoC: <code>https://target.com/login?id=' OR 1=1 --</code></p>
+                </div>
+                -->
+            </div>
         </section>
     </main>
     <footer>
         <p>Powered by 0xas1s | 2025</p>
     </footer>
     <script>
-        // Efect de tastare în terminal
         const output = document.querySelector('.output');
         const text = output.textContent;
         output.textContent = '';
