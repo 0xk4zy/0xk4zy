@@ -41,7 +41,7 @@
   <a href="https://discord.gg/qNcxZYQXM5" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
   </a>
-  <a href="https://tryhackme.com/p/asistbh" target="_blank">
+  <a href="https://tryhackme.com/p/kazythkr" target="_blank">
     <img src="https://img.shields.io/static/v1?message=TryHackMe&logo=tryhackme&label=&color=88cc14&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="tryhackme logo"  />
   </a>
 </div>
